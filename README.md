@@ -7,7 +7,7 @@ To install:
 
     go get github.com/asjustas/goini
 
-## Example
+Example:
 ```go
 package main
 
