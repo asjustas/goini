@@ -3,11 +3,9 @@ GoIni is simple .INI file parser in golang.
 
 ## Installation
 ============
-To install:
-
     go get github.com/asjustas/goini
 
-Example:
+## Usage
 ```go
 package main
 
