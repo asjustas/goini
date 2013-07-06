@@ -37,11 +37,11 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Print( conf.Str("owner", "name") )
-	fmt.Print( conf.Str("owner", "organization") )
+	fmt.Println( conf.Str("owner", "name") )
+	fmt.Println( conf.Str("owner", "organization") )
 
-	fmt.Print( conf.Str("database", "server") )
-	fmt.Print( conf.Int("database", "port") )
+	fmt.Println( conf.Str("database", "server") )
+	fmt.Println( conf.Int("database", "port") )
 	fmt.Print( conf.Str("database", "file") )
 }
 ```
