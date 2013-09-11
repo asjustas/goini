@@ -20,7 +20,7 @@ type IniRow struct {
 }
 
 type Ini struct {
-	elements []IniRow
+	Elements []IniRow
 }
 
 func (e *errorString) Error() string {
@@ -32,7 +32,7 @@ func New(text string) error {
 }
 
 func getValue(ini *Ini, section string, param string) string {
-	for _, element := range ini.elements {
+	for _, element := range ini.Elements {
 		if element.section == section && element.param == param {
 			return element.value
 			break
@@ -73,7 +73,7 @@ func Load(conf string) (*Ini, error) {
 						value:   strings.TrimSpace(KeyVal[1]),
 					}
 
-					arr.elements = append(arr.elements, row)
+					arr.Elements = append(arr.Elements, row)
 				}
 			}
 		}
