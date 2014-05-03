@@ -82,10 +82,12 @@ func Load(conf string) (*Ini, error) {
 	return arr, nil
 }
 
+// Str returns string type value.
 func (ini *Ini) Str(section, param string) string {
 	return getValue(ini, section, param)
 }
 
+// Int returns integer type value.
 func (ini *Ini) Int(section, param string) int {
 	val := getValue(ini, section, param)
 
