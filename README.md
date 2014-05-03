@@ -45,3 +45,5 @@ func main() {
 	fmt.Print( conf.Str("database", "file") )
 }
 ```
+## API Docs
+[http://godoc.org/github.com/asjustas/goini](http://godoc.org/github.com/asjustas/goini)
