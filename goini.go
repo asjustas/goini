@@ -13,12 +13,14 @@ type errorString struct {
 	s string
 }
 
+// IniRow contains parsed line section, param and value.
 type IniRow struct {
 	section string
 	param   string
 	value   string
 }
 
+// Ini struct contains parsed ini file lines.
 type Ini struct {
 	Elements []IniRow
 }
@@ -27,10 +29,12 @@ func (e *errorString) Error() string {
 	return e.s
 }
 
+// New returns new error.
 func New(text string) error {
 	return &errorString{text}
 }
 
+// getValue returns value as string.
 func getValue(ini *Ini, section string, param string) string {
 	for _, element := range ini.Elements {
 		if element.section == section && element.param == param {
@@ -43,6 +47,7 @@ func getValue(ini *Ini, section string, param string) string {
 	return ""
 }
 
+// Load function read file to memory and return Ini struct.
 func Load(conf string) (*Ini, error) {
 	file, err := os.Open(conf)
 	if err != nil {
