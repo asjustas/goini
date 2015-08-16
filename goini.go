@@ -107,3 +107,13 @@ func (ini *Ini) Int(section, param string) int {
 		}
 	}
 }
+
+// Bool returns boolean type value.
+func (ini *Ini) Bool(section, param string) bool {
+	val := getValue(ini, section, param)
+
+	if val == "true" || val == "1" {
+		return true
+	}
+	return false
+}
