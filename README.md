@@ -2,7 +2,7 @@
 GoIni is simple .INI file parser in golang.
 
 ## Installation
-go get github.com/asjustas/goini
+`go get github.com/asjustas/goini`
 
 ## Usage
 Ini file:
